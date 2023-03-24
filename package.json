@@ -2,17 +2,21 @@
   "name": "ts-loader-error",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "regenerator-runtime": "~0.13.11",
     "tslib": "~2.5.0"
   },
   "devDependencies": {
+    "esbuild": "^0.17.12",
     "ts-loader": "~9.4.2",
+    "ts-node": "^10.9.1",
     "typescript": "~5.0.2",
     "webpack": "~5.76.3",
     "webpack-cli": "^5.0.1"
   },
   "scripts": {
-    "build": "webpack build"
+    "build": "webpack build",
+    "esbuild": "esbuild index.ts --bundle --outfile=esbuild_bundle.mjs --allow-overwrite --format=esm --target=es2020 --minify"
   }
 }
