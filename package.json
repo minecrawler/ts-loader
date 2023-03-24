@@ -17,6 +17,8 @@
   },
   "scripts": {
     "build": "webpack build",
-    "esbuild": "esbuild index.ts --bundle --outfile=esbuild_bundle.mjs --allow-overwrite --format=esm --target=es2020 --minify"
+    "deno": "deno run index.ts",
+    "esbuild": "esbuild index.ts --bundle --outfile=esbuild_bundle.mjs --allow-overwrite --format=esm --target=es2020 --minify",
+    "node": "npm run esbuild && node esbuild_bundle.mjs"
   }
 }
